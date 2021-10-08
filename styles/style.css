@@ -1,0 +1,50 @@
+:root {
+    --main-color: #ffc066;
+    --secondary-color: #247BB3;
+    --secondary-color-light: #66C4FF;
+    --accent-color-dark: #B37E36;
+    --accent-color-light: #FFCA80;
+
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color-light);
+}
+
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 640px;
+    height: 400px;
+    border: 2px solid var(--accent-color-dark);
+    background-color: var(--secondary-color-light);
+}
+
+#cat-container {
+    width: 1px;
+    height: 1px;
+    background-color: red;
+    overflow: none;
+}
+
+#cat-image {
+    background-image: url(../images/cat1n.png);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: none;
+    position: relative;
+}

@@ -16,15 +16,25 @@
     <!--  -->
 
     <main class="flex-col-center space-between">
-        <div class="flex-row-center">
-            <h3>Score: <span id="high-score">0</span></h3>
+        <div class="flex-row-center" id="title">
+            <h2 class="containers">Level: <span id="current-level">1</span></h2>
+            <h3 class="containers">Score: <span id="high-score">0</span></h3>
+            <div class="containers">
+                <h3>Leaderboard</h3>
+                <p>1. 100,000,000</p>
+                <p>2. 100,000,000</p>
+                <p>3. 100,000,000</p>
+                <p>4. 100,000,000</p>
+                <p>5. 100,000,000</p>
+                </div>
+            
         </div>
         <div id="cat-container">
             <div id="cat-image" onclick="increment()">
             </div>
         </div>
         <div>
-            <p id="upgrade" onclick="upgrade()">UPGRADE 100 POINTS</p>
+            <button id="upgrade" onclick="upgrade()"><b>UPGRADE</b><br>100 POINTS</button>
         </div>
     </main>
 

@@ -24,9 +24,9 @@ function increment() {
 let img = document.getElementById("cat-image")
 
 let $cat0 = "url(images/cat1n.png)"
-let $cat1 = "url(../images/cat1.png)"
-let $cat2 = "url(../images/cat2.png)"
-let $cat3 = "url(../images/cat3.png)"
+let $cat1 = "url(images/cat1.png)"
+let $cat2 = "url(images/cat2.png)"
+let $cat3 = "url(images/cat3.png)"
 
 function catImageUpgrade() {
     if (level >= 100){
@@ -46,6 +46,8 @@ function catImageUpgrade() {
 
 catImageUpgrade()
 
+// FOR SOME REASON THIS DOESNT WORK??
+
 let upgradeButton = document.getElementById("upgrade")
 
 function upgrade() {
@@ -55,10 +57,14 @@ function upgrade() {
         countIncrease += 1
         level += 1
         currentLevel.innerText = level
-        catImageUpgrade
+        catImageUpgrade()
     }
     else { 
     }
 }
 
 // Basic upgrade.
+
+
+
+console.log("If you hax u sux, dont hax plz")

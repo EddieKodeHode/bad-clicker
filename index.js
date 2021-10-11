@@ -7,6 +7,12 @@ let currentLevel = document.getElementById("current-level")
 let levelCost = document.getElementById("level-cost")
 // Determines where level up cost gets displayed
 
+let upgradeButton = document.getElementById("upgrade")
+// Determines where upgrade cost will be displayed.
+
+let duplicateValue = document.getElementById("duplicator-value")
+// Determines where duplicator value will be displayed
+
 let count = 0
 // Count that is displayed
 
@@ -14,9 +20,11 @@ let countIncrease = 1
 // Amount the count increases by. Default is 1.
 
 let level = 1
-// Current upgrade level
+// Current upgrade level. Starts at 1. Matches default countIncrease value.
 
-let upgradeButton = document.getElementById("upgrade")
+let duplicator = 1.0
+// Current duplicator level. starts at 1.0.
+
 
 function updateButton() {
     if (count >= levelUpCost) {
@@ -30,23 +38,29 @@ function updateButton() {
         upgradeButton.style.backgroundColor="var(--light-gray)"
     }
 }
-// Change button color when ready to be used.
+// Function that updates the "Level up" button from gray to colored when you can purchase from it
 
 function increment() {
-    count += countIncrease
+    count += (countIncrease * duplicator)
+    count = Math.round(count)
     highScore.innerText = count
     updateButton()
 }
-// Function that makes buttonpress increase your count. Also changes the color of level up button.
+// Function that makes buttonpress increase your count
+// It also checks if the "Level up" button needs to be updated.
+// Rounds up count to exclude decimals
 
 // ------------------- IMAGE CHANGING CODE ------------------- //
 
 let img = document.getElementById("cat-image")
+// Determines where the images will go
 
 let $cat0 = "url(images/cat1n.png)"
 let $cat1 = "url(images/cat1.png)"
 let $cat2 = "url(images/cat2.png)"
 let $cat3 = "url(images/cat3.png)"
+
+// Assigning the url(image path here) to a var so code becomes more readable
 
 function catImageUpgrade() {
     if (level >= 100){
@@ -63,12 +77,17 @@ function catImageUpgrade() {
 
     }
 }
+// Else/If code that checks if the current level is high enough to switch to a new image.
+// Call the function during the upgrade/level up function.
 
 catImageUpgrade()
+// Call the function once to make sure the correct image is displayed initially.
+
 
 // ------------------------ Cat image code ^ ---------------------- //
 
 let levelUpCost = 100
+// Set a default level up cost. This will change
 
 function upgrade() {
     if (count >= levelUpCost) {
@@ -78,7 +97,7 @@ function upgrade() {
         level += 1
         currentLevel.innerText = level
         levelUpCost = levelUpCost * 1.05
-        levelUpCost = Math.round(levelUpCost)
+        levelUpCost = Math.round(levelUpCost) //Rounds the number so there's no decimals.
         levelCost.innerText = levelUpCost
         catImageUpgrade()
         updateButton()
@@ -86,11 +105,29 @@ function upgrade() {
     else { 
     }
 }
+// Basic level up.
 
-// Basic upgrade.
+let dupeNumber = 0.5
+
+function duplicate() {
+    duplicator += dupeNumber
+    duplicateValue.innerText = duplicator
+}
+// Duplication function. Change dupeNumber to increase/decrease dupe value.
+// Call this function inside another function.
 
 
+
+
+//  ------------------- TO-DO LIST ----------------------
+// 
+//  -   ADD POINT DUPLICATORS
+//  -   ADD IDLE POINTS?
+//  -   ADD SOUND EFFECTS
+//  -   LEADERBOARD (eventually...)
+//  -   tba
 
 
 
 console.log("If you hax u sux, dont hax plz")
+// I was told this will discourage console cheaters :')

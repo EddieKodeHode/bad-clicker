@@ -4,6 +4,8 @@
     --secondary-color-light: #66C4FF;
     --accent-color-dark: #B37E36;
     --accent-color-light: #FFCA80;
+    --light-gray: #888;
+    --dark-gray: #555;
 } 
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&display=swap');
@@ -32,16 +34,36 @@ body {
     justify-content: space-between;
 }
 
+.less-margin {
+    margin: 0.5em;
+}
+
 .containers {
     width: 200px;
     height: 20px;
     text-align: center;
 }
 
+.col-1 {
+    color: var(--accent-color-dark);
+}
+
+.col-2 {
+    color: var(--secondary-color);
+}
+
+.col-3 {
+    color: var(--secondary-color-light)
+}
+
 button {
     border-radius: 1em;
     padding: 0.5em;
     margin: 1em;
+    color: var(--dark-gray);
+    border: 3px outset var(--dark-gray);
+    background-color: var(--light-gray);
+    transition: 1s;
 }
 
 /* common and core CSS */
@@ -57,6 +79,17 @@ main {
 #title {
     width: 600px;
     justify-content: space-between;
+}
+
+#l-board {
+    margin-top: 5em;
+    border: 2px solid var(--secondary-color);
+    background-color: rgba(0,0,0,0.5);
+    color: var(--secondary-color-light);
+}
+
+#l-board h3 {
+    text-decoration: underline;
 }
 
 #cat-container {

@@ -4,6 +4,9 @@ let highScore = document.getElementById("high-score")
 let currentLevel = document.getElementById("current-level")
 // Determines where current level gets displayed
 
+let levelCost = document.getElementById("level-cost")
+// Determines where level up cost gets displayed
+
 let count = 0
 // Count that is displayed
 
@@ -13,13 +16,30 @@ let countIncrease = 1
 let level = 1
 // Current upgrade level
 
+let upgradeButton = document.getElementById("upgrade")
+
+function updateButton() {
+    if (count >= levelUpCost) {
+        upgradeButton.style.color="var(--secondary-color-light)"
+        upgradeButton.style.border="3px outset var(--secondary-color)"
+        upgradeButton.style.backgroundColor="var(--secondary-color)"
+    }
+    else {
+        upgradeButton.style.color="var(--dark-gray)"
+        upgradeButton.style.border="3px outset var(--dark-gray)"
+        upgradeButton.style.backgroundColor="var(--light-gray)"
+    }
+}
+// Change button color when ready to be used.
+
 function increment() {
     count += countIncrease
     highScore.innerText = count
+    updateButton()
 }
-// Function that makes buttonpress increase your count
+// Function that makes buttonpress increase your count. Also changes the color of level up button.
 
-// TESTING CHANGING IMAGE.
+// ------------------- IMAGE CHANGING CODE ------------------- //
 
 let img = document.getElementById("cat-image")
 
@@ -46,24 +66,30 @@ function catImageUpgrade() {
 
 catImageUpgrade()
 
-// FOR SOME REASON THIS DOESNT WORK??
+// ------------------------ Cat image code ^ ---------------------- //
 
-let upgradeButton = document.getElementById("upgrade")
+let levelUpCost = 100
 
 function upgrade() {
-    if (count >= 100) {
-        count = count - 100
+    if (count >= levelUpCost) {
+        count = count - levelUpCost
         highScore.innerText = count
         countIncrease += 1
         level += 1
         currentLevel.innerText = level
+        levelUpCost = levelUpCost * 1.05
+        levelUpCost = Math.round(levelUpCost)
+        levelCost.innerText = levelUpCost
         catImageUpgrade()
+        updateButton()
     }
     else { 
     }
 }
 
 // Basic upgrade.
+
+
 
 
 

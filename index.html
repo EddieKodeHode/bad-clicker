@@ -8,25 +8,33 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="flex-col-center">
-    <header class="flex-col-center">
-        <h1>First JS project!</h1>
-        <h3>Yes its a clicker.</h3>
+    <header class="flex-col-center col-1">
+        <h1 class="less-margin">Bad cat clicker!</h1>
+        <h3 class="less-margin">Yes its a clicker.</h3>
     </header>
 
     <!--  -->
 
     <main class="flex-col-center space-between">
-        <div class="flex-row-center" id="title">
-            <h2 class="containers">Level: <span id="current-level">1</span></h2>
-            <h3 class="containers">Score: <span id="high-score">0</span></h3>
+        <div class="flex-row-center col-2" id="title">
             <div class="containers">
-                <h3>Leaderboard</h3>
-                <p>1. 100,000,000</p>
-                <p>2. 100,000,000</p>
-                <p>3. 100,000,000</p>
-                <p>4. 100,000,000</p>
-                <p>5. 100,000,000</p>
+                <h2>Level: <span id="current-level">1</span></h2>
+            </div>
+
+            <div class="containers">
+                <h3>Score: <span id="high-score">0</span></h3>               
+            </div>
+
+            <div class="containers">
+                <div id="l-board">
+                    <h3>Leaderboard</h3>
+                    <p>1. 100,000,000</p>
+                    <p>2. 100,000,000</p>
+                    <p>3. 100,000,000</p>
+                    <p>4. 100,000,000</p>
+                    <p>5. 100,000,000</p>
                 </div>
+            </div>
             
         </div>
         <div id="cat-container">
@@ -34,14 +42,14 @@
             </div>
         </div>
         <div>
-            <button id="upgrade" onclick="upgrade()"><b>UPGRADE</b><br>100 POINTS</button>
+            <button id="upgrade" onclick="upgrade()"><b>LEVEL UP</b><br><span id="level-cost">100</span> POINTS</button>
         </div>
     </main>
 
     <!--  -->
 
     <footer class="flex-row-center">
-        <p>I made this. Why did I make this.</p>
+        <p class="less-margin col-1">I made this. Why did I make this.</p>
     </footer>
 
     <!--  -->

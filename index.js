@@ -124,6 +124,7 @@ function kibbleUp() {
         kibbleLevel.innerText = kibbleL
         duplicate()
         kibbleC = ( kibbleC * 1.5)
+        kibbleC = Math.round(kibbleC)
         kibbleCost.innerText = kibbleC
         upgradeAll()
     }
@@ -136,6 +137,7 @@ function toyUp() {
         toyLevel.innerText = toyL
         duplicate()
         toyC = ( toyC * 1.5)
+        toyC = Math.round(toyC)
         toyCost.innerText = toyC
         upgradeAll()
     }
@@ -148,6 +150,7 @@ function friendUp() {
         friendLevel.innerText = friendL
         duplicate()
         friendC = ( friendC * 1.5)
+        friendC = Math.round(friendC)
         friendCost.innerText = friendC
         upgradeAll()
     }

@@ -119,11 +119,21 @@ It might not look great on bigger/newer screens, but it wasn't a priority in thi
     position: relative;
     transition: 0.2s;
     z-index: 5;
+    animation: bobbing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bobbing {
+    0% {top: 5px; transform:rotateZ(-2deg);}
+    50% {top: 10px; transform:rotateZ(2deg);}
+    100% {top: 5px; transform:rotateZ(-2deg);}
 }
 
 #cat-image:hover {
     width: 110%;
     height: 110%;
+    animation-duration: 4s;
 }
 
 #item-background {

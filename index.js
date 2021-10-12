@@ -123,7 +123,7 @@ function kibbleUp() {
         kibbleL += 1
         kibbleLevel.innerText = kibbleL
         duplicate()
-        kibbleC = ( kibbleC * 2)
+        kibbleC = ( kibbleC * 1.5)
         kibbleCost.innerText = kibbleC
         upgradeAll()
     }
@@ -135,7 +135,7 @@ function toyUp() {
         toyL += 1
         toyLevel.innerText = toyL
         duplicate()
-        toyC = ( toyC * 2)
+        toyC = ( toyC * 1.5)
         toyCost.innerText = toyC
         upgradeAll()
     }
@@ -147,7 +147,7 @@ function friendUp() {
         friendL += 1
         friendLevel.innerText = friendL
         duplicate()
-        friendC = ( friendC * 2)
+        friendC = ( friendC * 1.5)
         friendCost.innerText = friendC
         upgradeAll()
     }
@@ -199,10 +199,6 @@ function friendImage() {
     }
 }
 
-
-
-
-
 function updateScore() {
     highScore.innerText = count
 }
@@ -252,11 +248,27 @@ let $cat0 = "url(images/cat1n.png)"
 let $cat1 = "url(images/cat1.png)"
 let $cat2 = "url(images/cat2.png)"
 let $cat3 = "url(images/cat3.png)"
+let $cat4 = "url(images/cat4.png)"
+let $cat5 = "url(images/cat5.png)"
+let $cat6 = "url(images/cat6.png)"
+let $cat7 = "url(images/cat7.png)"
 
 // Assigning the url(image path here) to a var so code becomes more readable
 
 function catImageUpgrade() {
-    if (level >= 100){
+    if (level >= 1000){
+        img.style.backgroundImage=$cat7
+    }
+    else if (level >= 750){
+        img.style.backgroundImage=$cat6
+    }
+    else if (level >= 500){
+        img.style.backgroundImage=$cat5
+    }
+    else if (level >= 250){
+        img.style.backgroundImage=$cat4
+    }
+    else if (level >= 100){
         img.style.backgroundImage=$cat3
     }
     else if (level >= 50){

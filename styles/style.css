@@ -42,6 +42,7 @@ body {
     width: 200px;
     height: 20px;
     text-align: center;
+    z-index: 2;
 }
 
 .col-1 {
@@ -64,6 +65,7 @@ button {
     border: 3px outset var(--dark-gray);
     background-color: var(--light-gray);
     transition: 1s;
+    z-index: 2;
 }
 
 /* common and core CSS */
@@ -74,7 +76,10 @@ main {
     background-image: url(../images/background1.gif);
     border: 2px solid var(--accent-color-dark);
     background-color: var(--secondary-color-light);
+    z-index: 1;
 }
+/* I'm using pixels instead of em/rem because image placement and consistency is important.
+It might not look great on bigger/newer screens, but it wasn't a priority in this project. */
 
 #title {
     width: 600px;
@@ -108,9 +113,45 @@ main {
     background-position: center;
     position: relative;
     transition: 0.2s;
+    z-index: 5;
 }
 
 #cat-image:hover {
     width: 110%;
     height: 110%;
 }
+
+#item-background {
+    z-index: -1;
+}
+
+#kibble-img {
+    background-image: url(../images/kibble1.png);
+    position: absolute;
+    height: 400px;
+    width: 640px;
+    top: 110px;
+    margin: auto;
+}
+
+#toy-img {
+    background-image: url(../images/toy1.png);
+    position: absolute;
+    height: 400px;
+    width: 640px;
+    top: 110px;
+    margin: auto;
+}
+
+#friend-img {
+    background-image: url(../images/friend1.png);
+    position: absolute;
+    height: 400px;
+    width: 640px;
+    top: 110px;
+    margin: auto;
+}
+
+/* Chose to use Background-image instead of <img> for the clickable cat. */
+
+/* THIS IS NOT DESIGNED FOR MOBILE. It DOES work on mobile however! */

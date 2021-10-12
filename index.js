@@ -116,7 +116,20 @@ function duplicate() {
 // Duplication function. Change dupeNumber to increase/decrease dupe value.
 // Call this function inside another function.
 
+let kibbleImg = document.getElementById("kibble-img")
+let toyImg = document.getElementById("toy-img")
+let friendImg = document.getElementById("friend-img")
+// Set destination for upgrade purchase graphics
 
+let $kibble0 = ""
+let $kibble1 = "url(images/kibble1)"
+
+let $toy0 = ""
+let $toy1 = "url(images/toy1.png)"
+
+let $friend0 = ""
+let $friend1 = "url(images/friend1.png)"
+// Set image source for upgrade graphics
 
 
 //  ------------------- TO-DO LIST ----------------------

@@ -66,6 +66,11 @@ button {
     background-color: var(--light-gray);
     transition: 1s;
     z-index: 2;
+    position: relative;
+}
+
+#upgrade {
+    z-index: 5;
 }
 
 /* common and core CSS */
@@ -122,34 +127,48 @@ It might not look great on bigger/newer screens, but it wasn't a priority in thi
 }
 
 #item-background {
+    width: 640px;
+    height: 400px;
     z-index: -1;
+    position: absolute;
+    top: 110px;
+    margin: auto;
 }
 
 #kibble-img {
-    background-image: url(../images/kibble1.png);
-    position: absolute;
-    height: 400px;
-    width: 640px;
-    top: 110px;
-    margin: auto;
+    background-image: none;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    top: 250px;
+    left: 170px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 #toy-img {
-    background-image: url(../images/toy1.png);
-    position: absolute;
-    height: 400px;
-    width: 640px;
-    top: 110px;
-    margin: auto;
+    background-image: none;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    top: 100px;
+    left: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 #friend-img {
-    background-image: url(../images/friend1.png);
-    position: absolute;
-    height: 400px;
-    width: 640px;
-    top: 110px;
-    margin: auto;
+    background-image: none;
+    position: relative;
+    height: 80px;
+    width: 80px;
+    top: 90px;
+    left: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 /* Chose to use Background-image instead of <img> for the clickable cat. */

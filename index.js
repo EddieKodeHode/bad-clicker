@@ -122,6 +122,7 @@ function kibbleUp() {
         count = count - kibbleC
         kibbleL += 1
         kibbleLevel.innerText = kibbleL
+        dupeNumber = 0.5
         duplicate()
         kibbleC = ( kibbleC * 1.5)
         kibbleC = Math.round(kibbleC)
@@ -135,6 +136,7 @@ function toyUp() {
         count = count - toyC
         toyL += 1
         toyLevel.innerText = toyL
+        dupeNumber = 1
         duplicate()
         toyC = ( toyC * 1.5)
         toyC = Math.round(toyC)
@@ -148,6 +150,7 @@ function friendUp() {
         count = count - friendC
         friendL += 1
         friendLevel.innerText = friendL
+        dupeNumber = 2
         duplicate()
         friendC = ( friendC * 1.5)
         friendC = Math.round(friendC)

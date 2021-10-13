@@ -43,7 +43,7 @@ let friendImg = document.getElementById("friend-img")
 let buttonKibble = document.getElementById("button-kibble")
 let buttonToy = document.getElementById("button-toy")
 let buttonFriend = document.getElementById("button-friend")
-// 
+// Get destination for upgrade purchase button graphics
 
 let $kibble0 = ""
 let $kibble1 = "url(images/kibble1.png)"
@@ -60,23 +60,28 @@ let $friend0 = ""
 let $friend1 = "url(images/friend1.png)"
 let $friend2 = "url(images/friend2.png)"
 let $friend3 = "url(images/friend3.png)"
-// Set image source for upgrade graphics
+// Set image source for upgrade graphics. Add another row for more. 
+// Not sure what the common naming convention is, but this makes sense for me as it stands out to the rest of my code. Since .png elements are so important to a clicker game like this.
 
 let kibbleLevel = document.getElementById("kibble-level")
 let toyLevel = document.getElementById("toy-level")
 let friendLevel = document.getElementById("friend-level")
+// Path to where the level will be displayed and updated
 
 let kibbleCost = document.getElementById("kibble-cost")
 let toyCost = document.getElementById("toy-cost")
 let friendCost = document.getElementById("friend-cost")
+// Path to where the cost will be displayed and updated
 
 let kibbleC = 1000
 let toyC = 100000
 let friendC = 1000000
+// Set innitial cost for upgrades
 
 let kibbleL = 0
 let toyL = 0
 let friendL = 0
+// Set innitial level for upgrades.
 
 function updateKibbleButton() {
     if (count >= kibbleC) {
@@ -116,6 +121,7 @@ function updateFriendButton() {
         buttonFriend.style.backgroundColor="var(--light-gray)"
     }
 }
+// Updates the appearance of the 3 upgrade buttons.
 
 function kibbleUp() {
     if ( count >= kibbleC ) {
@@ -128,6 +134,9 @@ function kibbleUp() {
         kibbleC = Math.round(kibbleC)
         kibbleCost.innerText = kibbleC
         upgradeAll()
+    }
+    else {
+
     }
 }
 
@@ -143,6 +152,9 @@ function toyUp() {
         toyCost.innerText = toyC
         upgradeAll()
     }
+    else {
+
+    }
 }
 
 function friendUp() {
@@ -157,8 +169,11 @@ function friendUp() {
         friendCost.innerText = friendC
         upgradeAll()
     }
-}
+    else {
 
+    }
+}
+// Function that levels up your duplicator upgrades. Will only activate once count is equal to or bigger than the required cost. Cost will change based on the "friendC = ( friendC * 1.05 )" It will dynamically scale in cost.
 
 function kibbleImage() {
     if (kibbleL >= 20) {
@@ -204,10 +219,12 @@ function friendImage() {
         friendImg.style.backgroundImage=$friend0
     }
 }
+// Function similar to cat img upgrade. Changes the img depending on how many levels your upgrade has
 
 function updateScore() {
     highScore.innerText = count
 }
+// Updates the score count. Use after buying upgrade, level ups or when getting points.
 
 function upgradeAll() {
     catImageUpgrade()
@@ -220,6 +237,7 @@ function upgradeAll() {
     toyImage()
     friendImage()
 }
+// I have a lot of functions that need to be checked often, so I put my functions inside another function to reduce the amount of duplicate code I'd have to write
 
 
 function updateButton() {
@@ -245,7 +263,9 @@ function increment() {
 // It also checks if the "Level up" button needs to be updated.
 // Rounds up count to exclude decimals
 
-// ------------------- IMAGE CHANGING CODE ------------------- //
+
+
+// ------------------- CAT IMAGE CHANGING CODE ------------------- //
 
 let img = document.getElementById("cat-image")
 // Determines where the images will go
@@ -294,11 +314,11 @@ function catImageUpgrade() {
 catImageUpgrade()
 // Call the function once to make sure the correct image is displayed initially.
 
-
 // ------------------------ Cat image code ^ ---------------------- //
 
+
 let levelUpCost = 100
-// Set a default level up cost. This will change
+// Set a default level up cost. This will change dynamically through the code.
 
 function upgrade() {
     if (count >= levelUpCost) {
@@ -314,16 +334,16 @@ function upgrade() {
     else { 
     }
 }
-// Basic level up.
+// Basic level up function.
 
 
 //  ------------------- TO-DO LIST ----------------------
 // 
-//  -   ADD POINT DUPLICATORS
-//  -   ADD IDLE POINTS?
-//  -   ADD SOUND EFFECTS
-//  -   LEADERBOARD (eventually...)
-//  -   tba
+//  -   DONE        ADD POINT DUPLICATORS
+//  -               ADD IDLE POINTS?
+//  -               ADD SOUND EFFECTS
+//  -               LEADERBOARD (eventually...)
+//  -               SAVING
 
 
 

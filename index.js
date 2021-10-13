@@ -124,7 +124,7 @@ function kibbleUp() {
         kibbleLevel.innerText = kibbleL
         dupeNumber = 0.5
         duplicate()
-        kibbleC = ( kibbleC * 1.5)
+        kibbleC = ( kibbleC * 1.05)
         kibbleC = Math.round(kibbleC)
         kibbleCost.innerText = kibbleC
         upgradeAll()
@@ -136,9 +136,9 @@ function toyUp() {
         count = count - toyC
         toyL += 1
         toyLevel.innerText = toyL
-        dupeNumber = 1
+        dupeNumber = 5
         duplicate()
-        toyC = ( toyC * 1.5)
+        toyC = ( toyC * 1.05)
         toyC = Math.round(toyC)
         toyCost.innerText = toyC
         upgradeAll()
@@ -150,9 +150,9 @@ function friendUp() {
         count = count - friendC
         friendL += 1
         friendLevel.innerText = friendL
-        dupeNumber = 2
+        dupeNumber = 10
         duplicate()
-        friendC = ( friendC * 1.5)
+        friendC = ( friendC * 1.05)
         friendC = Math.round(friendC)
         friendCost.innerText = friendC
         upgradeAll()
@@ -306,7 +306,7 @@ function upgrade() {
         countIncrease += 1
         level += 1
         currentLevel.innerText = level
-        levelUpCost = levelUpCost * 1.05
+        levelUpCost = levelUpCost * 1.01
         levelUpCost = Math.round(levelUpCost) //Rounds the number so there's no decimals.
         levelCost.innerText = levelUpCost
         upgradeAll()

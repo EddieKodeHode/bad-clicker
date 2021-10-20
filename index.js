@@ -342,8 +342,8 @@ function upgrade() {
 //  -   DONE        ADD POINT DUPLICATORS
 //  -               ADD IDLE POINTS?
 //  -               ADD SOUND EFFECTS
-//  -               LEADERBOARD (eventually...)
 //  -               SAVING
+//  -               LEADERBOARD (eventually...)
 
 
 

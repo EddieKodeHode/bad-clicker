@@ -130,7 +130,7 @@ function kibbleUp() {
         kibbleLevel.innerText = kibbleL
         dupeNumber = 0.5
         duplicate()
-        kibbleC = ( kibbleC * 1.1)
+        kibbleC = ( kibbleC * 1.05)
         kibbleC = Math.round(kibbleC)
         kibbleCost.innerText = kibbleC
         upgradeAll()
@@ -147,7 +147,7 @@ function toyUp() {
         toyLevel.innerText = toyL
         dupeNumber = 5
         duplicate()
-        toyC = ( toyC * 1.1)
+        toyC = ( toyC * 1.05)
         toyC = Math.round(toyC)
         toyCost.innerText = toyC
         upgradeAll()
@@ -164,7 +164,7 @@ function friendUp() {
         friendLevel.innerText = friendL
         dupeNumber = 10
         duplicate()
-        friendC = ( friendC * 1.1)
+        friendC = ( friendC * 1.05)
         friendC = Math.round(friendC)
         friendCost.innerText = friendC
         upgradeAll()
@@ -176,7 +176,7 @@ function friendUp() {
 // Function that levels up your duplicator upgrades. Will only activate once count is equal to or bigger than the required cost. Cost will change based on the "friendC = ( friendC * 1.05 )" It will dynamically scale in cost.
 
 function kibbleImage() {
-    if (kibbleL >= 20) {
+    else if (kibbleL >= 20) {
         kibbleImg.style.backgroundImage=$kibble3
     }
     else if (kibbleL >= 10) {
@@ -261,7 +261,7 @@ function increment() {
 }
 // Function that makes buttonpress increase your count
 // It also checks if the "Level up" button needs to be updated.
-// Rounds up count to exclude decimals
+// Rounds count to exclude decimals
 
 
 
@@ -326,7 +326,7 @@ function upgrade() {
         countIncrease += 1
         level += 1
         currentLevel.innerText = level
-        levelUpCost = levelUpCost * 1.05
+        levelUpCost = levelUpCost * 1.01
         levelUpCost = Math.round(levelUpCost) //Rounds the number so there's no decimals.
         levelCost.innerText = levelUpCost
         upgradeAll()

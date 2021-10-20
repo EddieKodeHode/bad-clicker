@@ -1,16 +1,16 @@
-let highScore = document.getElementById("high-score")
+const highScore = document.getElementById("high-score")
 // Determines where current points get displayed
 
-let currentLevel = document.getElementById("current-level")
+const currentLevel = document.getElementById("current-level")
 // Determines where current level gets displayed
 
-let levelCost = document.getElementById("level-cost")
+const levelCost = document.getElementById("level-cost")
 // Determines where level up cost gets displayed
 
-let upgradeButton = document.getElementById("upgrade")
+const upgradeButton = document.getElementById("upgrade")
 // Determines where upgrade cost will be displayed.
 
-let duplicateValue = document.getElementById("duplicator-value")
+const duplicateValue = document.getElementById("duplicator-value")
 // Determines where duplicator value will be displayed
 
 let count = 0

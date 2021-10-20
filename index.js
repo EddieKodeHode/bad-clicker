@@ -176,7 +176,7 @@ function friendUp() {
 // Function that levels up your duplicator upgrades. Will only activate once count is equal to or bigger than the required cost. Cost will change based on the "friendC = ( friendC * 1.05 )" It will dynamically scale in cost.
 
 function kibbleImage() {
-    else if (kibbleL >= 20) {
+    if (kibbleL >= 20) {
         kibbleImg.style.backgroundImage=$kibble3
     }
     else if (kibbleL >= 10) {
